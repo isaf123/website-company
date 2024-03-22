@@ -30,8 +30,8 @@ export default function Home() {
   ];
 
   const mapSection6 = () => {
-    return infoPhoto.map((val) => (
-      <div className="h-fit cursor-pointer">
+    return infoPhoto.map((val, idx) => (
+      <div className="h-fit cursor-pointer" key={idx}>
         <div className={val.url}>
           <div className="h-fit relative flex justify-center">
             <div className=" h-[80px] w-[290px] bg-gray-900 opacity-30 rounded-lg"></div>
@@ -45,8 +45,8 @@ export default function Home() {
   };
 
   const mapImg = () => {
-    return slides.map((val) => (
-      <img src={val} alt="" className="h-[255px] md:h-[300px]" />
+    return slides.map((val, idx) => (
+      <img key={idx} src={val} alt="" className="h-[255px] md:h-[300px]" />
     ));
   };
 
