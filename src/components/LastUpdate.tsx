@@ -2,6 +2,7 @@ import * as React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 interface ILastUpdateProps {
   tittle?: string;

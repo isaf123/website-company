@@ -14,9 +14,10 @@ import { useEffect } from "react";
 import { useState } from "react";
 import { getBlogPosts } from "@/utils/contentful";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 export default function Home() {
-  const slides = ["promo1.png", "promo2.png", "promo3.png"];
+  const slides = ["/promo1.png", "/promo2.png", "/promo3.png"];
   const [getName, setGetName] = useState<any[]>([]);
   const [getPhoto, setPhoto] = useState<any[]>([]);
   const router = useRouter();
@@ -97,19 +98,16 @@ export default function Home() {
 
   const mapImg = () => {
     return slides.map((val, idx) => (
-      <img key={idx} src={val} alt="" className="h-[255px] md:h-[300px]" />
+      <Image key={idx} src={val} width={800} height={600} alt="" />
+      // <img key={idx} src={val} alt="" className="h-[255px] md:h-[300px]" />
     ));
   };
 
   return (
     <main className="relative w-full h-fit">
       {}
+      <Image src={"/ct-scan.jpg"} alt="" width={1536} height={640} />
 
-      <img
-        src="ct-scan.jpg"
-        className="h-300px md:h-[640px] w-full brightness-50"
-        alt=""
-      />
       <div className="h-[300px] md:h-[640px] w-full absolute flex top-0 justify-center items-center">
         <div className="w-full">
           <h1 className="text-center text-gray-50  text-sm md:text-lg font-medium px-10 md:px-0 opacity-90 md:opacity-100 hidden md:block">
