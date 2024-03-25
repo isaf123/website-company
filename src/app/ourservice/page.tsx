@@ -1,5 +1,6 @@
 import * as React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
+import Image from "next/image";
 
 interface IAppProps {}
 
@@ -25,17 +26,22 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
         </div>
       </div>
       <div className="h-fit w-[360px] md:w-full overflow-x-auto">
-        <div className="flex w-[670px] md:w-full md:justify between gap-4 mt-3 ">
-          <div className=" flex-1 bg-gray-300 h-[240px] md:h-[300px] rounded-xl overflow-hidden">
-            <img src="hostloby.jpg" alt="" className="object-cover h-full" />
-          </div>
-          <div className=" flex-1 bg-gray-300 h-[240px] md:h-[300px] rounded-xl overflow-hidden">
-            <img
-              src="sofaloby.jpg"
-              alt=""
-              className="object-cover h-full w-full"
-            />
-          </div>
+        <div className="flex w-[fit] md:w-full md:justify-center gap-4 mt-3 ">
+          <Image
+            src="/hostloby.jpg"
+            alt=""
+            width={430}
+            height={420}
+            className="rounded-xl flex-1"
+          />
+
+          <Image
+            src="/sofaloby.jpg"
+            alt=""
+            width={520}
+            height={320}
+            className="flex-1 rounded-xl"
+          />
         </div>
       </div>
 
@@ -65,28 +71,16 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
         </div>
       </div>
       <div className="hidden md:block">
-        <div className="flex w-full gap-4 mt-3  h-[480px] ">
+        <div className="flex w-full gap-4 mt-3  h-[440px] ">
           <div className=" w-[65%] h-full bg-red-100 rounded-xl overflow-hidden">
-            <img
-              className="object-cover h-full"
-              src="https://images.unsplash.com/photo-1581595220057-eefa8c4add1b?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              alt=""
-            />
+            <Image src="/mri.jpg" alt="" width={778} height={520} />
           </div>
           <div className=" flex flex-col justify-between gap-4  w-[35%]">
             <div className="flex-1 w-full bg-red-300 h-full rounded-xl overflow-hidden">
-              <img
-                className="obect-cover h-full w-full"
-                src="https://images.unsplash.com/photo-1581595220921-eec2071e5159?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
+              <Image alt="" src="/ct-scan.jpg" width={364} height={212} />
             </div>
             <div className="flex-1 w-full bg-red-300 h-full rounded-xl overflow-hidden">
-              <img
-                className="h-full w-full object-cover"
-                src="https://images.unsplash.com/photo-1581594549595-35f6edc7b762?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt=""
-              />
+              <Image alt="" src="/lab.jpg" width={364} height={212} />
             </div>
           </div>
         </div>
@@ -125,13 +119,11 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
         <li>One Day Care</li>
         <li>One Day Surgery</li>
       </ul>
-      <div className="mt-3 h-[240px] md:h-[480px]">
+      <div className="mt-3 h-[240px] md:h-[440px]">
         <div className="w-full md:w-[65%] bg-gray-300 h-full rounded-xl overflow-hidden">
-          <img
-            src="https://national-hospital.com/storage/ugc/product/6205fdbf760b4-nh-in-patient-capacities-md.webp"
-            alt=""
-            className="object-cover h-full"
-          />
+          <Image alt="" src="/viproom.jpg" width={686} height={486} />
+
+          {/* <img src="/viproom.jpg" alt="" className="object-cover h-full" /> */}
         </div>
       </div>
     </div>
