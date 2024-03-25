@@ -4,10 +4,10 @@ import { GoPerson } from "react-icons/go";
 import { useRouter } from "next/navigation";
 
 interface ILastUpdateProps {
-  tittle: string;
+  tittle?: string;
   date: string;
-  body: string;
   img: any;
+  children: string;
 }
 
 const LastUpdate: React.FunctionComponent<ILastUpdateProps> = (props) => {
@@ -19,7 +19,7 @@ const LastUpdate: React.FunctionComponent<ILastUpdateProps> = (props) => {
         <img src={props.img} alt="" className="w-full h-full object-cover " />
       </div>
       <div className="w-full h-fit px-5">
-        <h1 className="font-bold text-lg mt-2">{props.tittle}</h1>
+        <h1 className="font-bold text-lg mt-2">{props.children}</h1>
         <div className="flex gap-20 mb-4 text-sm text-gray-500">
           <p>{props.date}</p>
           <div className="flex gap-2 items-center">

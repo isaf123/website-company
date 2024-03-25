@@ -21,8 +21,8 @@ const Testimony: React.FunctionComponent<ITestimonyProps> = (props) => {
   };
 
   const mapping1 = () => {
-    return fullStar().map((val) => {
-      return <MdOutlineStarPurple500 className={val} />;
+    return fullStar().map((val, idx) => {
+      return <MdOutlineStarPurple500 className={val} key={idx} />;
     });
   };
 
@@ -35,8 +35,8 @@ const Testimony: React.FunctionComponent<ITestimonyProps> = (props) => {
   };
 
   const mapping2 = () => {
-    return blankst().map((val) => {
-      return <MdOutlineStarBorderPurple500 className={val} />;
+    return blankst().map((val, idx) => {
+      return <MdOutlineStarBorderPurple500 className={val} key={idx} />;
     });
   };
 

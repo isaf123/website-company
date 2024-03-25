@@ -23,9 +23,9 @@ const ReadArticle: React.FunctionComponent<IReadArticleProps> = (props) => {
   console.log("responsessss", getData);
 
   const mapping = () => {
-    return getData.map((val) => {
+    return getData.map((val, idx) => {
       return (
-        <div>
+        <div key={idx}>
           <div className="w-full py-3 border-t-2 border-b-2 my-3">
             <p className="text-2xl font-bold">{val.titile}</p>
           </div>

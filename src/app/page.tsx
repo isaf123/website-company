@@ -136,7 +136,7 @@ export default function Home() {
             <h1 className="mb-3 font-bold md:text-xl text-gray-700">
               Find a Doctor
             </h1>
-            <ButtonGray>children</ButtonGray>
+            <ButtonGray>Find</ButtonGray>
           </div>
         </div>
         <div className="border w-[50%] md:w-[25%] bg-gray-200 flex items-center gap-1 md:gap-4 pl-4">
@@ -146,7 +146,7 @@ export default function Home() {
             <h1 className="mb-3 font-bold md:text-xl text-gray-700">
               Emergency Ambulance
             </h1>
-            <ButtonGray children="Find Ambulance" />
+            <ButtonGray>Find Ambulance</ButtonGray>
           </div>
         </div>
         <div className="border w-[50%] md:w-[25%] bg-gray-50 flex items-center gap-4 pl-4 py-6 md:py-8">
@@ -156,7 +156,8 @@ export default function Home() {
             <h1 className="mb-3 font-bold md:text-xl text-gray-700">
               How to get to us
             </h1>
-            <ButtonGray children="Get Us" />
+
+            <ButtonGray>Get Us</ButtonGray>
           </div>
         </div>
         <div className="border w-[50%] md:w-[25%] bg-gray-200 flex items-center gap-4 pl-4">
@@ -197,21 +198,15 @@ export default function Home() {
             Latest Update
           </h1>
           <div className="flex flex-col md:flex-row  md:justify-between gap-5 md:gap-0 items-center md:px-52">
-            <LastUpdate
-              date="21 feb"
-              tittle={getData[0]?.titile}
-              img={getData[0]?.image.fields.file.url}
-            />
-            <LastUpdate
-              date="21 feb"
-              tittle={getData[1]?.titile}
-              img={getData[1]?.image.fields.file.url}
-            />
-            <LastUpdate
-              date="21 feb"
-              tittle={getData[2]?.titile}
-              img={getData[2]?.image.fields.file.url}
-            />
+            <LastUpdate date="21 feb" img={getData[0]?.image.fields.file.url}>
+              {getData[0]?.titile}
+            </LastUpdate>
+            <LastUpdate date="21 feb" img={getData[1]?.image.fields.file.url}>
+              {getData[1]?.titile}
+            </LastUpdate>
+            <LastUpdate date="21 feb" img={getData[2]?.image.fields.file.url}>
+              {getData[2]?.titile}
+            </LastUpdate>
           </div>
         </div>
       </div>

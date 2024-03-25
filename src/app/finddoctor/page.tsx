@@ -38,9 +38,12 @@ const FindDoctor: React.FunctionComponent<IFindDoctorProps> = (props) => {
   ];
 
   const mapping = () => {
-    return doctor.map((val) => {
+    return doctor.map((val, idx) => {
       return (
-        <div className="w-[254px] h-[440px] border border-gray-200 group">
+        <div
+          key={idx}
+          className="w-[254px] h-[440px] border border-gray-200 group"
+        >
           <div className="relative w-full h-[300px]  ">
             <div className=" w-[220px] h-[300px] m-auto overflow-hidden group-hover:transform group-hover:scale-110 transition-transform duration-300">
               <img src={val.img} alt="" />
