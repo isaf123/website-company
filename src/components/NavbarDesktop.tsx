@@ -6,6 +6,7 @@ interface INavbarDesktopProps {}
 
 const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
   const router = useRouter();
+  const [data, setdata] = React.useState();
   return (
     <div className="hidden md:block">
       <div className="w-full px-32 py-2 bg-gray-50 flex justify-between ">
@@ -14,7 +15,12 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
         </div>
 
         <div className="flex gap-5 items-center">
-          <p className="font-medium cursor-pointer text-[15px]">About Us</p>
+          <p
+            onClick={() => router.push("/aboutus")}
+            className="font-medium cursor-pointer text-[15px]"
+          >
+            About Us
+          </p>
           <button
             className="font-medium text-[15px]"
             onClick={() => router.push("/ourservice")}
@@ -22,7 +28,12 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
             Our Services
           </button>
           <p className="font-medium cursor-pointer text-[15px]">Teams</p>
-          <p className="font-medium cursor-pointer text-[15px]">Find Doctor</p>
+          <p
+            className="font-medium cursor-pointer text-[15px]"
+            onClick={() => router.push("/finddoctor")}
+          >
+            Find Doctor
+          </p>
         </div>
       </div>
     </div>

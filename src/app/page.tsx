@@ -1,3 +1,4 @@
+"use client";
 import { IoIosSearch } from "react-icons/io";
 import { FaUserDoctor } from "react-icons/fa6";
 import ButtonGray from "@/components/Button1";
@@ -6,11 +7,17 @@ import { MdOutlineAddLocation } from "react-icons/md";
 import { MdOutlinePhonelinkRing } from "react-icons/md";
 import Button2 from "@/components/Button2";
 import LastUpdate from "@/components/LastUpdate";
-import Footer from "@/components/Footer";
-import { IoIosArrowRoundForward } from "react-icons/io";
+import Testimony from "@/components/Testimony";
+import { BASE_URL } from "@/utils/util";
+import axios from "axios";
+import { useEffect } from "react";
+import { useState } from "react";
+import { getBlogPosts } from "@/utils/contentful";
 
 export default function Home() {
   const slides = ["promo1.png", "promo2.png", "promo3.png"];
+  const [getName, setGetName] = useState<any[]>([]);
+  const [getPhoto, setPhoto] = useState<any[]>([]);
 
   const str =
     "bg-gray-300 h-[360px] w-[320px] rounded-lg bg-cover bg-no-repeat bg-center py-5";
@@ -29,9 +36,51 @@ export default function Home() {
     },
   ];
 
+  useEffect(() => {
+    onHandlePhoto();
+    getOtherArticle();
+  }, []);
+
+  const [getData, setGetData] = useState<any[]>([]);
+
+  const getOtherArticle = async () => {
+    try {
+      const response = await getBlogPosts();
+      setGetData(response);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  console.log(getData);
+
+  const onHandlePhoto = async () => {
+    try {
+      const newName = [];
+      const newPhoto = [];
+      for (let i = 0; i < 3; i++) {
+        const response = await axios.get(BASE_URL);
+        const photo = response.data.results[0].picture.large;
+        const firstName = response.data.results[0].name.first;
+        const lastName = response.data.results[0].name.last;
+        const name = `${firstName} ${lastName}`;
+        newName.push(name);
+        newPhoto.push(photo);
+      }
+      setGetName(newName);
+      setPhoto(newPhoto);
+    } catch (error) {}
+  };
+
+  console.log(getName);
+  // console.log(getPhoto);
+
   const mapSection6 = () => {
     return infoPhoto.map((val, idx) => (
-      <div className="h-fit cursor-pointer" key={idx}>
+      <div
+        className="h-fit cursor-pointer hover:transform hover:scale-110 transition-transform duration-300"
+        key={idx}
+      >
         <div className={val.url}>
           <div className="h-fit relative flex justify-center">
             <div className=" h-[80px] w-[290px] bg-gray-900 opacity-30 rounded-lg"></div>
@@ -65,7 +114,7 @@ export default function Home() {
             <p>from anywhere. Book your appointment with a doctor now.</p>
           </h1>
           <div className="flex justify-center">
-            <Button2 children="Make an Appoinment" />
+            <Button2>Make an Appointment</Button2>
           </div>
           <div className="flex justify-center md:opacity-60">
             <div className="w-[500px] mt-6 flex rounded-md overflow-hidden justify-between mx-5 md:mx-0 border md:border-0 border-gray-400">
@@ -87,7 +136,7 @@ export default function Home() {
             <h1 className="mb-3 font-bold md:text-xl text-gray-700">
               Find a Doctor
             </h1>
-            <ButtonGray children="Find" />
+            <ButtonGray>children</ButtonGray>
           </div>
         </div>
         <div className="border w-[50%] md:w-[25%] bg-gray-200 flex items-center gap-1 md:gap-4 pl-4">
@@ -117,7 +166,7 @@ export default function Home() {
             <h1 className="mb-3 font-bold text-sm md:text-xl text-gray-700">
               Further Information or Appointment
             </h1>
-            <ButtonGray children="Call Us" />
+            <ButtonGray>Call us</ButtonGray>
           </div>
         </div>
       </div>
@@ -129,7 +178,7 @@ export default function Home() {
       >
         <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
         <div className="w-full h-full absolute top-0 flex justify-center">
-          <div className="m-auto flex flex-col md:flex-row items-center gap-10">
+          <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">
             <p className="text-2xl md:text-5xl font-bold text-white">
               Best Promo For You
             </p>
@@ -150,27 +199,58 @@ export default function Home() {
           <div className="flex flex-col md:flex-row  md:justify-between gap-5 md:gap-0 items-center md:px-52">
             <LastUpdate
               date="21 feb"
-              tittle="Sub Pin Polio at National Hospital"
-              body="On February 20 2024, National Hospital in collaboration with the Surabaya City Government held Sub Pin Polio ..."
-              img={
-                "https://images.unsplash.com/photo-1578496781985-452d4a934d50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
+              tittle={getData[0].titile}
+              img={getData[0].image.fields.file.url}
             />
             <LastUpdate
               date="21 feb"
-              tittle="Sub Pin Polio at National Hospital"
-              body="On February 20 2024, National Hospital in collaboration with the Surabaya City Government held Sub Pin Polio ..."
-              img={
-                "https://images.unsplash.com/photo-1578496781985-452d4a934d50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
+              tittle={getData[1].titile}
+              img={getData[1].image.fields.file.url}
             />
             <LastUpdate
               date="21 feb"
-              tittle="Sub Pin Polio at National Hospital"
-              body="On February 20 2024, National Hospital in collaboration with the Surabaya City Government held Sub Pin Polio ..."
-              img={
-                "https://images.unsplash.com/photo-1578496781985-452d4a934d50?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-              }
+              tittle={getData[2].titile}
+              img={getData[2].image.fields.file.url}
+            />
+          </div>
+        </div>
+      </div>
+
+      {/* section testimony */}
+
+      <div className="w-full pb-32 md:px-52">
+        <h2 className="text-3xl font-bold text-center mb-16">
+          What Our Patients Say
+        </h2>
+        <div className="overflow-x-auto h-fit w-full">
+          <div className="flex justify-between w-[1120px] md:w-full h-[270px] items-end px-3">
+            <Testimony
+              name={getName[0]}
+              testi="I highly recommend National Hospital to anyone in need of medical
+            care. I felt welcomed and well taken care of. Thank you to the
+            entire team for their dedication."
+              position="Patient"
+              fullst={4}
+              blankst={1}
+              src={getPhoto[0]}
+            />
+
+            <Testimony
+              name={getName[1]}
+              testi="The staff at XYZ Hospital provided exceptional care during my recent visit. Their professionalism and compassion made a stressful situation much more manageable."
+              position="Patient"
+              fullst={5}
+              blankst={0}
+              src={getPhoto[1]}
+            />
+
+            <Testimony
+              name={getName[2]}
+              testi="National Hospital exceeded all my expectations. The medical team was efficient and thorough, and I left feeling confident in the treatment I received. A truly remarkable healthcare facility."
+              position="Patient"
+              fullst={5}
+              blankst={0}
+              src={getPhoto[2]}
             />
           </div>
         </div>
@@ -178,14 +258,14 @@ export default function Home() {
 
       {/* section 6 */}
       <div className="hidden md:block">
-        <div className=" flex flex-col md:flex-row justify-center gap-5  items-center md:px-52">
+        <div className=" flex flex-col md:flex-row justify-center gap-5  items-center md:px-52 ">
           {mapSection6()}
         </div>
       </div>
 
       <div className="block md:hidden">
         <div className="h-fit w-[360px] overflow-x-auto m-auto">
-          <div className="flex gap-5 md:gap-0  items-center justify-between ">
+          <div className="flex gap-5 md:gap-0  items-center justify-between">
             {mapSection6()}
           </div>
         </div>

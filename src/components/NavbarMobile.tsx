@@ -17,7 +17,10 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
         </div>
         <div className="hidden group-hover:block">
           <div className="absolute top-[100%] z-50 flex flex-col">
-            <p className="font-medium cursor-pointer text-[15px] bg-gray-50 w-[390px] py-2 px-5 border-b-2 border-b-gray-200">
+            <p
+              className="font-medium cursor-pointer text-[15px] bg-gray-50 w-[390px] py-2 px-5 border-b-2 border-b-gray-200"
+              onClick={() => router.push("/aboutus")}
+            >
               About Us
             </p>
             <p
@@ -29,7 +32,10 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
             <p className="font-medium cursor-pointer text-[15px] bg-gray-50 w-[390px] py-2 px-5 border-b-2 border-b-gray-200">
               Teams
             </p>
-            <p className="font-medium cursor-pointer text-[15px] bg-gray-50 w-[390px] py-2 px-5 border-b-2 border-b-gray-200">
+            <p
+              className="font-medium cursor-pointer text-[15px] bg-gray-50 w-[390px] py-2 px-5 border-b-2 border-b-gray-200"
+              onClick={() => router.push("/finddoctor")}
+            >
               Find Doctor
             </p>
           </div>

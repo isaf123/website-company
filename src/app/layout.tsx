@@ -22,7 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <NavbarDesktop />
         <NavbarMobile />
-        {children}
+        <div className="max-w-[1920px] m-auto">{children}</div>
         <Footer />
       </body>
     </html>

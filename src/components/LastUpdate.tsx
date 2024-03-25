@@ -1,6 +1,7 @@
 import * as React from "react";
 import { IoIosArrowRoundForward } from "react-icons/io";
 import { GoPerson } from "react-icons/go";
+import { useRouter } from "next/navigation";
 
 interface ILastUpdateProps {
   tittle: string;
@@ -10,6 +11,8 @@ interface ILastUpdateProps {
 }
 
 const LastUpdate: React.FunctionComponent<ILastUpdateProps> = (props) => {
+  const router = useRouter();
+
   return (
     <div className=" h-fit w-[320px] shadow-md hover:shadow-lg pb-5">
       <div className="bg-gray-300 w-full h-[200px]">
@@ -24,9 +27,14 @@ const LastUpdate: React.FunctionComponent<ILastUpdateProps> = (props) => {
             <p>admin</p>
           </div>
         </div>
-        <p className="text-gray-500 mb-2">{props.body}</p>
-        <div className="flex gap-1 items-center cursor-pointer">
-          <p className=" text-xs">Read More</p>
+
+        <div className="flex gap-1 items-center ">
+          <p
+            className=" cursor-pointer text-xs"
+            onClick={() => router.push("/article")}
+          >
+            Read More
+          </p>
           <IoIosArrowRoundForward className="w-6 h-6" />
         </div>
       </div>
