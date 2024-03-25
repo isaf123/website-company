@@ -9,7 +9,11 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
       <div className="w-fit h-fit">
         <div className="flex flex-col md:flex-row gap-10 ">
           <div>
-            <LogoText />
+            <img
+              src="https://www.react.co.id/assets/img/NATIONAL%20HOSPITAL%20LOGO%202019.png"
+              alt=""
+              width={200}
+            />
             <p className="my-4 font-medium">
               Boulevard Famili Sel. No.Kav. 1. Surabaya. East Java. Indonesia
             </p>
@@ -23,16 +27,30 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
           <div className="flex flex-col md:flex-row gap-10 md:gap-40">
             <div>
               <p className="font-medium text-xl mb-5">COMPANY</p>
-              <p className="mb-3">About us</p>
-              <p className="mb-3">Our Services</p>
-              <p className="mb-3">Latest Update</p>
-              <p className="mb-3">Careers</p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                About us
+              </p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Our Services
+              </p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Latest Update
+              </p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Careers
+              </p>
             </div>
             <div>
               <p className="font-medium text-xl mb-5">SUPPORT</p>
-              <p className="mb-3">Doctors Team</p>
-              <p className="mb-3">Find a Doctor</p>
-              <p className="mb-3">Contact Us</p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Doctors Team
+              </p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Find a Doctor
+              </p>
+              <p className="mb-3 cursor-pointer hover:text-[#00A3C8]">
+                Contact Us
+              </p>
             </div>
           </div>
         </div>

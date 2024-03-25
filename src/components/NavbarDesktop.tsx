@@ -11,7 +11,11 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
     <div className="hidden md:block">
       <div className="w-full px-32 py-2 bg-gray-50 flex justify-between ">
         <div className="cursor-pointer" onClick={() => router.push("/")}>
-          <LogoText />
+          <img
+            src="https://www.react.co.id/assets/img/NATIONAL%20HOSPITAL%20LOGO%202019.png"
+            alt=""
+            width={200}
+          />
         </div>
 
         <div className="flex gap-5 items-center">

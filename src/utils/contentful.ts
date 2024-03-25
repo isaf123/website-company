@@ -21,4 +21,4 @@ export const getBlogPosts = async()=>{
   const results = await getEntriesByType("blogPost");
   const blogPost = results.map((blog)=>blog.fields)
   return blogPost
-}
+} 

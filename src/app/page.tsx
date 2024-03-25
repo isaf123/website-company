@@ -13,11 +13,13 @@ import axios from "axios";
 import { useEffect } from "react";
 import { useState } from "react";
 import { getBlogPosts } from "@/utils/contentful";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
   const slides = ["promo1.png", "promo2.png", "promo3.png"];
   const [getName, setGetName] = useState<any[]>([]);
   const [getPhoto, setPhoto] = useState<any[]>([]);
+  const router = useRouter();
 
   const str =
     "bg-gray-300 h-[360px] w-[320px] rounded-lg bg-cover bg-no-repeat bg-center py-5";
@@ -102,11 +104,12 @@ export default function Home() {
   return (
     <main className="relative w-full h-fit">
       {}
-      <div
-        className="h-[300px] md:h-[640px] w-full 
-        bg-[url('https://images.unsplash.com/photo-1600959907703-125ba1374a12?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
-        bg-cover bg-no-repeat bg-center brightness-[.3] flex flex-col justify-center"
-      ></div>
+
+      <img
+        src="ct-scan.jpg"
+        className="h-300px md:h-[640px] w-full brightness-50"
+        alt=""
+      />
       <div className="h-[300px] md:h-[640px] w-full absolute flex top-0 justify-center items-center">
         <div className="w-full">
           <h1 className="text-center text-gray-50  text-sm md:text-lg font-medium px-10 md:px-0 opacity-90 md:opacity-100 hidden md:block">
@@ -114,7 +117,9 @@ export default function Home() {
             <p>from anywhere. Book your appointment with a doctor now.</p>
           </h1>
           <div className="flex justify-center">
-            <Button2>Make an Appointment</Button2>
+            <Button2 onClick={() => router.push("/finddoctor")}>
+              Make an Appointment
+            </Button2>
           </div>
           <div className="flex justify-center md:opacity-60">
             <div className="w-[500px] mt-6 flex rounded-md overflow-hidden justify-between mx-5 md:mx-0 border md:border-0 border-gray-400">
@@ -156,7 +161,6 @@ export default function Home() {
             <h1 className="mb-3 font-bold md:text-xl text-gray-700">
               How to get to us
             </h1>
-
             <ButtonGray>Get Us</ButtonGray>
           </div>
         </div>

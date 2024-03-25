@@ -1,5 +1,4 @@
 import * as React from "react";
-import FindDoctors from "@/components/FindDoctor";
 
 interface IFindDoctorProps {}
 
