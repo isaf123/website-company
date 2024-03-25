@@ -73,7 +73,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
       <div className="hidden md:block">
         <div className="flex w-full gap-4 mt-3  h-[440px] ">
           <div className=" w-[65%] h-full bg-red-100 rounded-xl overflow-hidden">
-            <Image src="/mri.jpg" alt="" width={778} height={520} />
+            <Image src="/MRI.jpg" alt="" width={778} height={520} />
           </div>
           <div className=" flex flex-col justify-between gap-4  w-[35%]">
             <div className="flex-1 w-full bg-red-300 h-full rounded-xl overflow-hidden">
