@@ -119,7 +119,7 @@ export default function Home() {
           <div className="flex justify-center md:opacity-60">
             <div className="w-[500px] mt-6 flex rounded-md overflow-hidden justify-between mx-5 md:mx-0 border md:border-0 border-gray-400">
               <input className="w-full px-5" type="text" />
-              <div className="bg-blue-500 flex justify-center items-center py-2 px-6 hover:bg-blue-400 cursor-pointer">
+              <div className="bg-[#00A3C8] flex justify-center items-center py-2 px-6 hover:bg-blue-400 cursor-pointer">
                 <IoIosSearch className="w-6 h-6 text-white cursor-pointer" />
               </div>
             </div>
@@ -199,18 +199,18 @@ export default function Home() {
           <div className="flex flex-col md:flex-row  md:justify-between gap-5 md:gap-0 items-center md:px-52">
             <LastUpdate
               date="21 feb"
-              tittle={getData[0].titile}
-              img={getData[0].image.fields.file.url}
+              tittle={getData[0]?.titile}
+              img={getData[0]?.image.fields.file.url}
             />
             <LastUpdate
               date="21 feb"
-              tittle={getData[1].titile}
-              img={getData[1].image.fields.file.url}
+              tittle={getData[1]?.titile}
+              img={getData[1]?.image.fields.file.url}
             />
             <LastUpdate
               date="21 feb"
-              tittle={getData[2].titile}
-              img={getData[2].image.fields.file.url}
+              tittle={getData[2]?.titile}
+              img={getData[2]?.image.fields.file.url}
             />
           </div>
         </div>

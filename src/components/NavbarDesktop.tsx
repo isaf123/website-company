@@ -16,18 +16,24 @@ const NavbarDesktop: React.FunctionComponent<INavbarDesktopProps> = (props) => {
 
         <div className="flex gap-5 items-center">
           <p
+            onClick={() => router.push("/")}
+            className="font-medium cursor-pointer text-[15px]"
+          >
+            Home
+          </p>
+          <p
             onClick={() => router.push("/aboutus")}
             className="font-medium cursor-pointer text-[15px]"
           >
             About Us
           </p>
           <button
-            className="font-medium text-[15px]"
+            className="font-medium cursor-pointer text-[15px]"
             onClick={() => router.push("/ourservice")}
           >
             Our Services
           </button>
-          <p className="font-medium cursor-pointer text-[15px]">Teams</p>
+
           <p
             className="font-medium cursor-pointer text-[15px]"
             onClick={() => router.push("/finddoctor")}
