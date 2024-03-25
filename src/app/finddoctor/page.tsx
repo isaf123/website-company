@@ -1,3 +1,4 @@
+import Image from "next/image";
 import * as React from "react";
 
 interface IFindDoctorProps {}
@@ -6,32 +7,32 @@ const FindDoctor: React.FunctionComponent<IFindDoctorProps> = (props) => {
   const doctor = [
     {
       name: "Dr. Emily Anderson, Sp. JP",
-      img: "doctor1.png",
+      img: "/doctor1.png",
       spec: "Cardiology",
     },
     {
       name: "Dr. Benjamin Carter, Sp. JPK",
-      img: "doctor2.png",
+      img: "/doctor2.png",
       spec: "Cardiology",
     },
     {
       name: "Dr. Sarah Wilson, Dermatology Specialist",
-      img: "doctor3.png",
+      img: "/doctor3.png",
       spec: "Dermatology",
     },
     {
       name: "Dr. Ethan Johnson, Dermatology Specialist",
-      img: "doctor5.png",
+      img: "/doctor5.png",
       spec: "Dermatology",
     },
     {
       name: "Dr. Matthew Evans, Neurology Specialist",
-      img: "doctor4.png",
+      img: "/doctor4.png",
       spec: "Neurology",
     },
     {
       name: "Dr. Alexander Rodriguez, Radiology Specialist",
-      img: "doctor6.png",
+      img: "/doctor6.png",
       spec: "Radiology",
     },
   ];
@@ -45,7 +46,8 @@ const FindDoctor: React.FunctionComponent<IFindDoctorProps> = (props) => {
         >
           <div className="relative w-full h-[300px]  ">
             <div className=" w-[220px] h-[300px] m-auto overflow-hidden group-hover:transform group-hover:scale-110 transition-transform duration-300">
-              <img src={val.img} alt="" />
+              <Image src={val.img} alt="" width={256} height={284} />
+              {/* <img src={val.img} alt="" /> */}
             </div>
             <div className="w-full h-full flex absolute bg-gradient-to-t from-white to-transparent top-4 justify-center items-end  pb-4">
               <img

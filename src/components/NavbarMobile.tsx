@@ -13,7 +13,11 @@ const NavbarMobile: React.FunctionComponent<INavbarMobileProps> = (props) => {
     <div className="block md:hidden">
       <div className="relative group py-2">
         <div className="ml-6" onClick={() => router.push("/")}>
-          <LogoText />
+          <img
+            src="https://www.react.co.id/assets/img/NATIONAL%20HOSPITAL%20LOGO%202019.png"
+            alt=""
+            width={140}
+          />
         </div>
         <div className="hidden group-hover:block">
           <div className="absolute top-[100%] z-50 flex flex-col">
