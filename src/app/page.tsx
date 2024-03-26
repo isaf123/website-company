@@ -125,7 +125,7 @@ export default function Home() {
           src={"/ambul.png"}
           alt=""
           width={400}
-          height={320}
+          height={30}
           className="absolute -top-20 brightness-[0.3] block md:hidden"
         />
       </div>
@@ -211,8 +211,7 @@ export default function Home() {
         {" "}
       </div>
       {/* ///////////////////////////////////////////////////// */}
-      <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
-      <div className="w-full h-full absolute md:-top-[600px] flex justify-center">
+      <div className="w-full h-fit absolute md:top-[860px] flex justify-center">
         <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">
           <p className="text-2xl md:text-5xl font-bold md:text-white ">
             Best Promo For You
