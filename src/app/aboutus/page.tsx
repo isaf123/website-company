@@ -4,7 +4,6 @@ import { IoIosArrowRoundForward } from "react-icons/io";
 interface IAppProps {}
 
 const App: React.FunctionComponent<IAppProps> = (props) => {
-  
   return (
     <div className=" px-4 md:px-60 py-20">
       <div className="w-full py-3 border-t-2 border-b-2 my-3">
@@ -117,6 +116,30 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
           </div>
         </div>
       </div>
+
+      <div className="w-full py-3 border-t-2 border-b-2 my-3">
+        <p className="text-2xl font-bold">National Hospital's Values</p>
+      </div>
+      <h3 className="text-xl font-bold">P.R.O.U.D</h3>
+      <p className="text-lg text-gray-600 leading-[30px]">
+        <span className=" font-bold">Pursue Excellence</span> : Providing the
+        best healthcare services and focusing on patients
+      </p>
+      <p className="text-lg text-gray-600 leading-[30px]">
+        <span className="font-bold">Respect and Honor</span> : Appreciate and
+        respect each individual
+      </p>
+      <p className="text-lg text-gray-600 leading-[30px]">
+        <span className="font-bold">One</span> : Cross-disciplinary
+        collaboration as a team
+      </p>
+      <p className="text-lg text-gray-600 leading-[30px]">
+        <span className="font-bold">Unique</span> : Creative and Innovative
+      </p>
+      <p className="text-lg text-gray-600 leading-[30px]">
+        <span className="font-bold">Delegates</span>: Develop the skills of each
+        individual
+      </p>
     </div>
   );
 };
