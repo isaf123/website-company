@@ -126,7 +126,7 @@ export default function Home() {
           alt=""
           width={400}
           height={320}
-          className="absolute -top-20 brightness-[0.3] block md:hidden"
+          className="absolute -top-20 brightness-[0.3]"
         />
       </div>
 
