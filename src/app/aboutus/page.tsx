@@ -118,7 +118,7 @@ const App: React.FunctionComponent<IAppProps> = (props) => {
       </div>
 
       <div className="w-full py-3 border-t-2 border-b-2 my-3">
-        <p className="text-2xl font-bold">National Hospital's Values</p>
+        <p className="text-2xl font-bold">National Hospital&apos;s Values</p>
       </div>
       <h3 className="text-xl font-bold">P.R.O.U.D</h3>
       <p className="text-lg text-gray-600 leading-[30px]">
