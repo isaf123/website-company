@@ -112,6 +112,13 @@ export default function Home() {
           alt=""
           width={1536}
           height={640}
+          className="absolute -top-20 brightness-[0.3] hidden md:block"
+        />
+        <Image
+          src={"/ambul.png"}
+          alt=""
+          width={400}
+          height={320}
           className="absolute -top-20 brightness-[0.3]"
         />
       </div>
@@ -198,7 +205,7 @@ export default function Home() {
       </div>
 
       <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
-      <div className="w-full h-full absolute md:-top-[398px] flex justify-center">
+      <div className="w-full h-full absolute md:-top-[600px] flex justify-center">
         <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">
           <p className="text-2xl md:text-5xl font-bold md:text-white ">
             Best Promo For You
