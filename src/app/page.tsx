@@ -106,10 +106,17 @@ export default function Home() {
   return (
     <main className="relative w-full h-fit">
       {}
+      <div className="relative overflow-hidden h-[220px] md:h-[640px] ">
+        <Image
+          src={"/ambul.png"}
+          alt=""
+          width={1536}
+          height={640}
+          className="absolute -top-20 brightness-[0.3]"
+        />
+      </div>
 
-      <Image src={"/ct-scan2.png"} alt="" width={1536} height={640} />
-
-      <div className="h-[300px] md:h-[640px] w-full absolute flex top-0 justify-center items-center">
+      <div className="h-[300px] md:h-[640px] w-full absolute flex top-0 justify-center items-center ">
         <div className="w-full">
           <h1 className="text-center text-gray-50  text-sm md:text-lg font-medium px-10 md:px-0 opacity-90 md:opacity-100 hidden md:block">
             Advanced healthcare, accessible at all times,
