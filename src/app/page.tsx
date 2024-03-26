@@ -175,19 +175,28 @@ export default function Home() {
       </div>
 
       {/* section 3 */}
+      {/* <Image
+        src={"/hostloby.jpg"}
+        alt=""
+        width={400}
+        height={100}
+        className="block md:hidden brightness-[0.3]"
+      /> */}
       <div
-        className="h-[460px] w-full  bg-[url('https://images.unsplash.com/photo-1559000357-f6b52ddfbe37?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
-       bg-cover bg-no-repeat bg-center  flex flex-col justify-center mb-10 relative"
+        className="hidden md:block h-[460px] w-full  bg-[url('https://images.unsplash.com/photo-1559000357-f6b52ddfbe37?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')]
+       bg-cover bg-no-repeat bg-center mb-10 relative brightness-50"
       >
-        <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
-        <div className="w-full h-full absolute top-0 flex justify-center">
-          <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">
-            <p className="text-2xl md:text-5xl font-bold text-white">
-              Best Promo For You
-            </p>
-            <div className=" h-fit w-[380px] md:w-[570px] overflow-x-auto">
-              <div className="flex gap-5 ">{mapImg()}</div>
-            </div>
+        {" "}
+      </div>
+
+      <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
+      <div className="w-full h-full absolute md:-top-[398px] flex justify-center">
+        <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">
+          <p className="text-2xl md:text-5xl font-bold md:text-white ">
+            Best Promo For You
+          </p>
+          <div className=" h-fit w-[380px] md:w-[570px] overflow-x-auto">
+            <div className="flex gap-5 ">{mapImg()}</div>
           </div>
         </div>
       </div>
@@ -195,7 +204,7 @@ export default function Home() {
       {/* section 5 */}
       <div className="pt-20 pb-32">
         <div>
-          <h1 className="m-auto text-3xl md:text-5xl font-bold md:px-52 mb-10 md:mb-16 w-[320px] md:w-full">
+          <h1 className="m-auto text-3xl md:text-5xl font-bold pt-80 md:px-52 mb-10 md:mb-16 w-[320px] md:w-full">
             {" "}
             Latest Update
           </h1>
@@ -282,9 +291,35 @@ export default function Home() {
           </p>
 
           <div className="flex gap-10 mt-6 px-4 md:px-0">
-            <Image src={"/editapp.png"} alt="" width={180} height={30} />
+            <Image
+              src={"/editapp.png"}
+              alt=""
+              width={180}
+              height={30}
+              className="hidden md:block"
+            />
+            <Image
+              src={"/editapp.png"}
+              alt=""
+              width={120}
+              height={40}
+              className="block md:hidden"
+            />
 
-            <Image src={"/editgoogle.png"} alt="" width={180} height={30} />
+            <Image
+              src={"/editgoogle.png"}
+              alt=""
+              width={180}
+              height={30}
+              className="hidden md:block"
+            />
+            <Image
+              src={"/editgoogle.png"}
+              alt=""
+              width={120}
+              height={40}
+              className="block md:hidden"
+            />
           </div>
         </div>
         <img
