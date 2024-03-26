@@ -103,6 +103,13 @@ export default function Home() {
     ));
   };
 
+  const mapImgmobile = () => {
+    return slides.map((val, idx) => (
+      <Image key={idx} src={val} width={380} height={100} alt="" />
+      // <img key={idx} src={val} alt="" className="h-[255px] md:h-[300px]" />
+    ));
+  };
+
   return (
     <main className="relative w-full h-fit">
       {}
@@ -211,7 +218,12 @@ export default function Home() {
             Best Promo For You
           </p>
           <div className=" h-fit w-[380px] md:w-[570px] overflow-x-auto">
-            <div className="flex gap-5 ">{mapImg()}</div>
+            <div className="hidden md:block">
+              <div className="flex gap-5 ">{mapImg()}</div>
+            </div>
+            <div className="block md:hidden">
+              <div className="flex gap-5 ">{mapImgmobile()}</div>
+            </div>
           </div>
         </div>
       </div>
