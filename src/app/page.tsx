@@ -210,7 +210,7 @@ export default function Home() {
       >
         {" "}
       </div>
-
+      {/* ///////////////////////////////////////////////////// */}
       <div className="w-full h-full bg-[#00A3C8] opacity-60 "></div>
       <div className="w-full h-full absolute md:-top-[600px] flex justify-center">
         <div className=" flex flex-col md:flex-row items-center mt-10 md:mt-0 gap-10">

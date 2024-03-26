@@ -16,8 +16,9 @@ const LastUpdate: React.FunctionComponent<ILastUpdateProps> = (props) => {
 
   return (
     <div className=" h-fit w-[320px] shadow-md hover:shadow-lg pb-5">
-      <div className="bg-gray-300 w-full h-[200px]">
-        <img src={props.img} alt="" className="w-full h-full object-cover " />
+      <div className="bg-gray-300 w-full h-[200px] overflow-hidden">
+        <img width={352} src={props.img} alt="" className="hidden md:block" />
+        <img width={320} src={props.img} alt="" className="block md:hidden" />
       </div>
       <div className="w-full h-fit px-5">
         <h1 className="font-bold text-lg mt-2">{props.children}</h1>
