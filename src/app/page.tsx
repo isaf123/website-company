@@ -105,7 +105,7 @@ export default function Home() {
 
   const mapImgmobile = () => {
     return slides.map((val, idx) => (
-      <Image key={idx} src={val} width={380} height={100} alt="" />
+      <Image key={idx} src={val} width={340} height={80} alt="" />
       // <img key={idx} src={val} alt="" className="h-[255px] md:h-[300px]" />
     ));
   };
