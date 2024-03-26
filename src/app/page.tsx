@@ -106,7 +106,8 @@ export default function Home() {
   return (
     <main className="relative w-full h-fit">
       {}
-      <Image src={"/ct-scan.jpg"} alt="" width={1536} height={640} />
+
+      <Image src={"/ct-scan2.png"} alt="" width={1536} height={640} />
 
       <div className="h-[300px] md:h-[640px] w-full absolute flex top-0 justify-center items-center">
         <div className="w-full">
@@ -204,7 +205,7 @@ export default function Home() {
       {/* section 5 */}
       <div className="pt-20 pb-32">
         <div>
-          <h1 className="m-auto text-3xl md:text-5xl font-bold pt-80 md:px-52 mb-10 md:mb-16 w-[320px] md:w-full">
+          <h1 className="m-auto text-3xl md:text-5xl font-bold pt-80 md:pt-0 md:px-52 mb-10 md:mb-16 w-[320px] md:w-full">
             {" "}
             Latest Update
           </h1>
