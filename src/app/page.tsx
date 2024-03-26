@@ -282,16 +282,9 @@ export default function Home() {
           </p>
 
           <div className="flex gap-10 mt-6 px-4 md:px-0">
-            <img
-              src="editapp.png"
-              alt=""
-              className="h-[38px] md:h-[50px] w-fit"
-            />
-            <img
-              src="editgoogle.png"
-              alt=""
-              className="h-[40px] md:h-[50px] w-fit"
-            />
+            <Image src={"/editapp.png"} alt="" width={180} height={30} />
+
+            <Image src={"/editgoogle.png"} alt="" width={180} height={30} />
           </div>
         </div>
         <img

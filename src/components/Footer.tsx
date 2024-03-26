@@ -1,5 +1,6 @@
 import * as React from "react";
 import LogoText from "./LogoText";
+import Image from "next/image";
 
 interface IFooterProps {}
 
@@ -9,11 +10,8 @@ const Footer: React.FunctionComponent<IFooterProps> = (props) => {
       <div className="w-fit h-fit">
         <div className="flex flex-col md:flex-row gap-10 ">
           <div>
-            <img
-              src="https://www.react.co.id/assets/img/NATIONAL%20HOSPITAL%20LOGO%202019.png"
-              alt=""
-              width={200}
-            />
+            <Image src={"/logonat.png"} alt="" width={200} height={80} />
+
             <p className="my-4 font-medium">
               Boulevard Famili Sel. No.Kav. 1. Surabaya. East Java. Indonesia
             </p>
