@@ -25,7 +25,7 @@ const ReadArticle: React.FunctionComponent<IReadArticleProps> = (props) => {
   const mapping = () => {
     return getData.map((val, idx) => {
       return (
-        <div key={idx}>
+        <div key={idx} className="">
           <div className="w-full py-3 border-t-2 border-b-2 my-3">
             <p className="text-2xl font-bold">{val.titile}</p>
           </div>
@@ -33,7 +33,7 @@ const ReadArticle: React.FunctionComponent<IReadArticleProps> = (props) => {
             {val.description}
           </p>
 
-          <div className="mt-3 h-[240px] md:h-[480px]">
+          <div className="mt-3 h-[320px] md:h-[480px]">
             <div className="w-full md:w-[40%] bg-gray-300 h-[320px] rounded-xl overflow-hidden">
               <img
                 src={val.image.fields.file.url}
