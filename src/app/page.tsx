@@ -227,6 +227,17 @@ export default function Home() {
         </div>
       </div>
 
+      <div className="px-80 text-center">
+        <div className="w-full py-3 border-t-2 border-b-2 my-3">
+          <p className="text-2xl font-bold">HOSPITAL PROFILE</p>
+        </div>
+        <p className="text-lg text-gray-600 leading-[30px]">
+          National Hospital is located at Boulevard Famili Sel. No.Kav. 1
+          Surabaya which provides excellent services with sophisticated
+          technology and experienced health experts.
+        </p>
+      </div>
+
       {/* section 5 */}
       <div className="pt-20 pb-32">
         <div>
